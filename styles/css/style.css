@@ -10,14 +10,11 @@
   --header-height: 3rem;
 
   /*========== Colors ==========*/
-  --first-color: #03b961;
-  --heading-color: #48455a;
-  --first-color-alt: #4dbd92;
-  --title-color: #393939;
-  --text-color: #707070;
+  --main-color: #00A79A;
+  --title-color: #000000;
+  --text-color: #5C5C5C;
   --text-color-light: #a6a6a6;
-  --header-color: #ffffff;
-  --container-color: #ffffff;
+  --white-color: #ffffff;
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
@@ -81,7 +78,7 @@ a {
 }
 
 .container {
-  width: 92%;
+  max-width: 1420px;
   margin: auto;
 }
 /*========== BASE ==========*/
@@ -201,3 +198,19 @@ button:focus {
 }
 
 /* ====================================================ALL PAGE USE STYLE============================================ */
+.navbar{
+background: var(--main-color);
+padding: 0 20px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+ul.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
