@@ -3,11 +3,10 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 function Header() {
-
   return (
     <>
       <nav className="navbar">
-        <div className="container">
+        <div className="navbar-wrapper">
           <header className="header">
             <div className="logo">
               <Link href="/">
@@ -22,10 +21,9 @@ function Header() {
                 <Link href="/">How it works</Link>
               </li>
               <li>
-                <Link href="/" className="contact-btn">Get Started</Link>
-              </li>
-              <li>
-                <Link href="/contact">Contact</Link>
+                <Link href="/" className="contact-btn">
+                  Get Started
+                </Link>
               </li>
             </ul>
           </header>
