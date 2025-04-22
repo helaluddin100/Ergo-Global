@@ -35,7 +35,7 @@ const ScoreMeter = ({ score }) => {
                   className="score-line"
                   style={{ transform: `rotate(${angle - 90}deg)` }}
                 >
-                  <img src="/img/line-score.png" alt="" />
+                  <div className="bar-line"></div>
                 </div>
               </div>
               <span>High</span>
