@@ -54,8 +54,8 @@ const HowItWork = ({ isOpen, onClose }) => {
                   </ul>
                 </div>
                 <div className="how-work-link">
-                  <a href="">Ready to assess your setup?</a>
-                  <a href="">Start the calculator and get your score →</a>
+                  <h5>Ready to assess your setup?</h5>
+                  <h5>Start the calculator and get your score →</h5>
                 </div>
               </div>
             </div>

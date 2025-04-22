@@ -195,7 +195,7 @@
     border: 1px solid;
     border-radius: 12px;
   }
-  .how-work-link a {
+  .how-work-link h5 {
     color: var(--main-color);
     font-size: 16px;
     line-height: normal;
@@ -279,6 +279,18 @@
   }
   .question-section {
     gap: 12px;
+  }
+  .model-overlay .model {
+    border-radius: 10px;
+  }
+  .how-close-btn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+  }
+  .how-close-btn img {
+    width: 30px;
   }
 }
 @media (max-width: 466px) {

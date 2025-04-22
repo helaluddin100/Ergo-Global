@@ -635,10 +635,11 @@ ul.nav-links li .contact-btn:hover {
 .hero-banner-img img {
   max-width: 100%;
 }
-.how-work-link a {
+.how-work-link h5 {
   color: var(--main-color);
   font-size: 24px;
   font-weight: 600;
+  line-height: normal;
 }
 
 /* ================================ Test page ============== */
