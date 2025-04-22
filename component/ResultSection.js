@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Link from "next/link";
 const ResultSection = () => {
   const [email, setEmail] = useState("");
   const [agree, setAgree] = useState(false);
@@ -40,9 +40,15 @@ const ResultSection = () => {
       </div>
 
       <div className="result-section-btn">
-        <button className="custom-btn  custom-test-btn" disabled={!email}>
+        {/* <button className="custom-btn  custom-test-btn" disabled={!email}>
           <span> Check Score</span>
-        </button>
+        </button> */}
+
+        <Link href="/score" >
+          <button className="custom-btn  custom-test-btn" disabled={!email}>
+            <span> Check Score</span>
+          </button>
+        </Link>
       </div>
     </div>
   );
