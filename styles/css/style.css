@@ -422,8 +422,26 @@ button:focus {
   justify-content: space-between;
   align-items: center;
 }
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+.close-menu {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
 
-ul.nav-links {
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--white-color);
+}
+
+.nav-links {
   display: flex;
   align-items: center;
   gap: 30px;
@@ -436,13 +454,26 @@ ul.nav-links li a {
   background: rgba(229, 244, 242, 0.3);
   border-radius: 20px;
   font-weight: 600;
+  transition: 0.4s;
   font-size: 16px;
   color: var(--white-color);
+}
+ul.nav-links li a:hover {
+  background: var(--white-color);
+  color: var(--main-color);
+}
+ul.nav-links li .contact-alt {
+  background: none;
 }
 ul.nav-links li .contact-btn {
   background: var(--white-color);
   font-weight: 600;
   color: var(--main-color);
+  transition: 0.4s;
+}
+ul.nav-links li .contact-btn:hover {
+  background: rgba(229, 244, 242, 0.3);
+  color: var(--white-color);
 }
 
 /* ================= Hero Section ================ */
@@ -497,6 +528,7 @@ ul.nav-links li .contact-btn {
   border-radius: 20px;
   color: var(--main-color);
   font-weight: 600;
+  white-space: nowrap;
   transition: 0.4s;
 }
 .custom-btn:hover {
@@ -677,6 +709,7 @@ ul.nav-links li .contact-btn {
   margin-top: 142px;
   display: flex;
   gap: 20px;
+  margin-bottom: 20px;
 }
 
 .question-number {
@@ -722,6 +755,7 @@ ul.nav-links li .contact-btn {
   cursor: pointer;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   font-weight: 300;
+  line-height: normal;
   transition: 0.2s;
 }
 .question-section-content .option:last-child {
@@ -749,7 +783,7 @@ ul.nav-links li .contact-btn {
   width: 100%;
 }
 
-.section-title {
+.section-title h4 {
   color: #000;
   font-family: var(--primary-font);
   font-size: 20px;
@@ -914,17 +948,6 @@ ul.nav-links li .contact-btn {
   transition: transform 0.5s ease-in-out;
   border-radius: 15px;
 }
-/* .score-line::before {
-  content: "";
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgb(0, 0, 0);
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-} */
 
 .score-count-item {
   padding-top: 30px;

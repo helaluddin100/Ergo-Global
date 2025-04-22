@@ -1,8 +1,16 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import HowItWork from "../HowItWork";
 
 function Header() {
+  const [activeMenu, setActiveMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setActiveMenu(!activeMenu);
+  };
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   return (
     <>
       <nav className="navbar">
@@ -13,15 +21,27 @@ function Header() {
                 <img src="/img/logo/logo.png" alt="Logo" />
               </Link>
             </div>
-            <ul className="nav-links">
+            <div className="menu-toggle" onClick={toggleMenu}>
+              <span className="bar" />
+              <span className="bar" />
+              <span className="bar" />
+            </div>
+            <ul className={`nav-links ${activeMenu ? "active" : ""}`}>
+              <div className="close-menu" onClick={toggleMenu}>
+                <img src="/img/icon/close-menu.svg" alt="" />
+              </div>
               <li>
-                <Link href="/">Contact</Link>
+                <Link href="/" className="contact-alt">
+                  Contact
+                </Link>
               </li>
               <li>
-                <Link href="/">How it works</Link>
+                <Link href="/" onClick={openModal}>
+                  How it works
+                </Link>
               </li>
               <li>
-                <Link href="/" className="contact-btn">
+                <Link href="/test" className="contact-btn">
                   Get Started
                 </Link>
               </li>
@@ -29,6 +49,7 @@ function Header() {
           </header>
         </div>
       </nav>
+      <HowItWork isOpen={isModalOpen} onClose={closeModal} />
     </>
   );
 }

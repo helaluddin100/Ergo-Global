@@ -1,12 +1,12 @@
 {
-  "name": "myapp",
+  "name": "ERGO GLOBAl",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "lint": "next lint",
-    "dev": "next dev", 
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start" 
+    "start": "next start"
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6",
@@ -19,7 +19,7 @@
     "react-facebook-pixel": "^1.0.4",
     "react-faq-component": "^1.3.4",
     "react-gtm-module": "^2.0.11",
-    "react-router-dom": "^6.0.0",  
+    "react-router-dom": "^6.0.0",
     "sass": "^1.49.0",
     "sitemap": "^7.1.1",
     "swiper": "^8.1.4"

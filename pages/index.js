@@ -11,7 +11,7 @@ function Home() {
   return (
     <>
       <Head>
-        <title>NFT Website Development Services |nft constructer</title>
+        <title>Check your Ergonomic Risk Score for Free</title>
         <link rel="icon" type="image" href="/favicon.png"></link>
       </Head>
       <section className="hero">

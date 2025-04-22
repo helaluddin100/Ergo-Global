@@ -1,0 +1,292 @@
+@media (max-width: 992px) {
+  .hero {
+    height: 100%;
+  }
+  .hero-wrapper {
+    padding: 50px 0;
+  }
+  .hero-content h1 {
+    font-size: 30px;
+    padding-bottom: 7px;
+  }
+  .hero-content {
+    padding-right: 58px;
+    padding-bottom: 40px;
+  }
+  .hero-banner-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-btns {
+    padding-top: 20px;
+  }
+  .score-page {
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    transition: 0.4s;
+    gap: 20px;
+  }
+  .model-content-wrapper {
+    width: 100%;
+  }
+  .model-overlay .model {
+    border-radius: 20px;
+  }
+  .how-work-content {
+    padding: 16px 30px 30px 30px;
+    gap: 7px;
+  }
+
+  .nav-links.active {
+    display: flex;
+    background: var(--main-color);
+    width: 100%;
+    opacity: 1;
+    z-index: 11111;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 100px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+  .close-menu {
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 30px;
+  }
+  .test-wrapper {
+    padding-top: 20px;
+  }
+  .question-section {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  .question-text {
+    font-size: 21px;
+    line-height: normal;
+    margin-bottom: 5px;
+  }
+  .question-subtext {
+    margin-bottom: 15px;
+  }
+  .question-section-content .option {
+    gap: 10px;
+    font-size: 16px;
+    padding: 10px 22px;
+  }
+  .question-section-content .options {
+    width: 100%;
+  }
+  .footer-nav {
+    align-items: center;
+    padding: 16px 24px;
+    gap: 15px;
+    flex-direction: column;
+  }
+  .section-title {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+  }
+  .footer-nav .custom-btn {
+    width: 140px;
+  }
+  .result-section {
+    padding-top: 45px;
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  .form-group-item.checkbox {
+    align-items: flex-start;
+    text-align: start;
+  }
+  .form-group-item input {
+    padding: 15px 22px;
+    border-radius: 10px;
+  }
+  .result-title h2 {
+    font-size: 25px;
+    color: var(--title-color);
+    line-height: 136%;
+  }
+  .form-group-item.checkbox label {
+    padding-bottom: 0;
+    font-size: 12px;
+    line-height: 124%;
+  }
+  .score-right-content {
+    margin-top: 25px;
+  }
+  .score-page {
+    padding-bottom: 40px;
+    padding-top: 25px;
+  }
+  .score-page .score-title {
+    padding-bottom: 20px;
+  }
+  .recommendation-item {
+    position: relative;
+    padding: 14px 30px;
+    height: 96px;
+    display: flex;
+    align-items: center;
+  }
+  .recommendation-content {
+    width: 243px;
+  }
+  .score-list-item {
+    grid-template-columns: 14% 82%;
+    width: 100%;
+  }
+  .score-wrapper {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .hero-wrapper {
+    padding: 30px 0 40px 0;
+  }
+
+  .question-text {
+    font-size: 16px;
+    line-height: 142%;
+    margin-bottom: 5px;
+  }
+  .question-number {
+    font-size: 32px;
+    line-height: normal;
+  }
+  .hero-content h1 {
+    font-size: 30px;
+    padding-bottom: 7px;
+  }
+  .hero-content {
+    padding-right: 0px;
+    padding-bottom: 40px;
+  }
+  .logo a img {
+    width: 80px;
+  }
+  .navbar {
+    background: var(--main-color);
+    padding: 16px 15px;
+  }
+  .hero-btns {
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+  }
+  .custom-btn {
+    padding: 10px 20px;
+    border: 1px solid;
+    border-radius: 12px;
+  }
+  .how-work-link a {
+    color: var(--main-color);
+    font-size: 16px;
+    line-height: normal;
+    white-space: break-spaces;
+  }
+  .how-work-title h2 {
+    font-size: 20px;
+    line-height: normal;
+  }
+  .how-work-content {
+    padding: 16px 20px 30px 20px;
+  }
+  .section-title h4 {
+    color: #000;
+    font-family: var(--primary-font);
+    font-size: 20px;
+    line-height: normal;
+    font-weight: 400;
+  }
+  .section-title h4 {
+    font-size: 16px;
+  }
+  .section-title span {
+    font-size: 16px;
+  }
+  .score-page .score-title h1 {
+    font-size: 27px;
+    line-height: normal;
+  }
+  .score-card-item {
+    padding: 25px 20px 30px 20px;
+  }
+  .score-spinner-wrapper {
+    margin-top: 15px;
+  }
+  .score-list ul li h3 {
+    font-size: 18px;
+    line-height: normal;
+  }
+  .score-list {
+    padding: 15px;
+  }
+  .score-list ul li p {
+    font-size: 12px;
+    line-height: normal;
+    padding-top: 5px;
+  }
+  .score-card-title {
+    font-family: var(--primary-font);
+    font-size: 20px;
+    line-height: normal;
+  }
+  .score-count-item h2 {
+    font-weight: 600;
+    font-family: var(--primary-font);
+    font-size: 60px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+  }
+  .recommendation-content {
+    width: 204px;
+  }
+  .recommendation-item h2 {
+    font-size: 16px;
+    padding-bottom: 5px;
+  }
+  .recommendation-item::before {
+    background-size: cover;
+    background-position: right;
+  }
+  .recommendation-item {
+    padding: 14px 24px;
+  }
+  .score-list-item {
+    grid-template-columns: 16% 79%;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .score-item-icon {
+    margin-top: 3px;
+  }
+  .question-section {
+    gap: 12px;
+  }
+}
+@media (max-width: 466px) {
+  .score-list-item {
+    grid-template-columns: 20% 74%;
+    width: 100%;
+  }
+  .score-line {
+    height: 96px;
+  }
+}

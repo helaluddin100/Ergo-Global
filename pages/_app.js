@@ -5,6 +5,7 @@ import "swiper/css/pagination";
 import "../styles/css/bootstrap.min.css";
 import "../styles/css/font.css";
 import "../styles/css/style.css";
+import "../styles/css/responsive.css";
 
 import { Fragment, useEffect } from "react";
 function MyApp({ Component, pageProps }) {
