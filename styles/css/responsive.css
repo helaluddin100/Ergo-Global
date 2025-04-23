@@ -24,6 +24,9 @@
   .score-page {
     padding-bottom: 50px;
   }
+  .result-from-wrapper {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -119,7 +122,7 @@
     border-radius: 10px;
   }
   .result-title h2 {
-    font-size: 25px;
+    font-size: 20px;
     color: var(--title-color);
     line-height: 136%;
   }
