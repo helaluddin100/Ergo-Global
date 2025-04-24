@@ -2,9 +2,14 @@ import React from "react";
 import AppLayout from "../component/Layout/Layout";
 import ScoreMeter from "../component/ScoreMeter";
 import Head from "next/head";
+import { useRouter } from 'next/router'; // Import useRouter
 
 const ScorePage = () => {
-  const score = 15;
+  const router = useRouter();
+  const { totalScore } = router.query; // Get the totalScore from the query parameters
+
+  // Convert totalScore to a number.  It will be a string from the URL.
+  const score = totalScore ? parseInt(totalScore, 10) : 0;
   return (
     <>
       <Head>
@@ -32,8 +37,8 @@ const ScorePage = () => {
                       </p>
                     </div>
                     {/* <div className="recommendation-img">
-                  <img src="/img/score-img.png" alt="" />
-                </div> */}
+              <img src="/img/score-img.png" alt="" />
+            </div> */}
                   </div>
                   <div className="score-list-items">
                     <div className="score-list-item">
