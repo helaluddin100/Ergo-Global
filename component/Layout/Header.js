@@ -21,17 +21,17 @@ function Header() {
                 <img src="/img/logo/logo.png" alt="Logo" />
               </Link>
             </div>
-            <div className="menu-toggle" onClick={toggleMenu}>
+            {/* <div className="menu-toggle" onClick={toggleMenu}>
               <span className="bar" />
               <span className="bar" />
               <span className="bar" />
-            </div>
-            <ul className={`nav-links ${activeMenu ? "active" : ""}`}>
-              <div className="close-menu" onClick={toggleMenu}>
+            </div> */}
+            <ul className={`nav-links`}>
+              {/* <div className="close-menu" onClick={toggleMenu}>
                 <img src="/img/icon/close-menu.svg" alt="" />
-              </div>
+              </div> */}
               <li>
-                <Link href="/">Contact</Link>
+                <Link href="/">Contact Us</Link>
               </li>
               {/* <li>
                 <Link href="/" onClick={openModal}>

@@ -34,7 +34,7 @@ const ResultSection = ({ totalScore }) => {
     if (!lastName.trim()) errors.lastName = "Last Name is required";
     if (!email.trim()) errors.email = "Email is required";
     if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
-      errors.email = "Invalid email address";
+      errors.email = "Please enter a valid email address";
     }
     if (!companyName.trim()) errors.companyName = "Company Name is required";
     if (!location.trim()) errors.location = "Location is required";

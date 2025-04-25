@@ -30,13 +30,13 @@
 }
 
 @media (max-width: 768px) {
-  .nav-links {
+  /* .nav-links {
     display: none;
     opacity: 0;
     flex-direction: column;
     transition: 0.4s;
     gap: 20px;
-  }
+  } */
   .model-content-wrapper {
     width: 100%;
   }
@@ -157,6 +157,8 @@
   }
   .score-wrapper {
     width: 100%;
+    gap: 0;
+    grid-template-columns: 100%;
   }
 }
 @media (max-width: 576px) {
