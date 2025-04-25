@@ -15,7 +15,6 @@ const ResultSection = ({ totalScore }) => {
   const [formErrors, setFormErrors] = useState({});
   const [submissionStatus, setSubmissionStatus] = useState(null);
 
-
   const options = [
     { value: "1-10", label: "1-10 employees" },
     { value: "11-50", label: "11-50 employees" },
@@ -43,10 +42,9 @@ const ResultSection = ({ totalScore }) => {
 
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
-      setSubmissionStatus('error');
+      setSubmissionStatus("error");
       return;
     }
-
 
     const formData = {
       first_name: firstName,
@@ -73,23 +71,26 @@ const ResultSection = ({ totalScore }) => {
       console.log("API Response:", response.data);
 
       if (response.data.success) {
-        setSubmissionStatus('success');
+        setSubmissionStatus("success");
         // Redirect to score page with totalScore as a query parameter
         window.location.href = `/score?totalScore=${totalScore}`;
       } else {
-        setSubmissionStatus('error');
-        setFormErrors({ api: 'Failed to submit data.  Check the server.' });
+        setSubmissionStatus("error");
+        setFormErrors({ api: "Failed to submit data.  Check the server." });
       }
     } catch (error) {
       console.error("API Error:", error);
-      setSubmissionStatus('error');
+      setSubmissionStatus("error");
       if (error.response) {
-        setFormErrors({ api: error.response.data.message || 'An error occurred.' });
-
+        setFormErrors({
+          api: error.response.data.message || "An error occurred.",
+        });
       } else if (error.request) {
-        setFormErrors({ api: 'No response from server.' });
+        setFormErrors({ api: "No response from server." });
       } else {
-        setFormErrors({ api: 'Error setting up the request: ' + error.message });
+        setFormErrors({
+          api: "Error setting up the request: " + error.message,
+        });
       }
     }
   };
@@ -99,7 +100,9 @@ const ResultSection = ({ totalScore }) => {
       <div className="result-title">
         <h2>Thanks! We&apos;ve got your responses.</h2>
         <h2>Please enter your email to see your Ergonomics Risk score.</h2>
-        {totalScore && <p>Your Total Score: {totalScore}</p>}
+        {totalScore && (
+          <p className="total-score-item">Your Total Score: {totalScore}</p>
+        )}
       </div>
       <form onSubmit={handleSubmit}>
         <div className="result-from-wrapper">
@@ -154,7 +157,9 @@ const ResultSection = ({ totalScore }) => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                {formErrors.email && <p className="text-danger">{formErrors.email}</p>}
+                {formErrors.email && (
+                  <p className="text-danger">{formErrors.email}</p>
+                )}
               </div>
             </div>
             <div className="col-lg-6">
@@ -211,10 +216,14 @@ const ResultSection = ({ totalScore }) => {
                 <Select
                   classNamePrefix="custom-select"
                   options={options}
-                  placeholder="Employee Base Range"
+                  placeholder="Select your employee base range"
                   required
-                  value={options.find(option => option.value === employeeBase)}
-                  onChange={(selectedOption) => setEmployeeBase(selectedOption.value)}
+                  value={options.find(
+                    (option) => option.value === employeeBase
+                  )}
+                  onChange={(selectedOption) =>
+                    setEmployeeBase(selectedOption.value)
+                  }
                 />
                 {formErrors.employeeBase && (
                   <p className="text-danger">{formErrors.employeeBase}</p>
@@ -238,12 +247,14 @@ const ResultSection = ({ totalScore }) => {
                 <span> Check Score</span>
               </button>
             </div>
-            {submissionStatus === 'success' && (
-              <p className="text-green-500">Form submitted successfully!  Redirecting to score page.</p>
+            {submissionStatus === "success" && (
+              <p className="text-green-500">
+                Form submitted successfully! Redirecting to score page.
+              </p>
             )}
-            {submissionStatus === 'error' && (
+            {submissionStatus === "error" && (
               <p className="text-red-500">
-                {formErrors.api || 'An error occurred. Please try again.'}
+                {formErrors.api || "An error occurred. Please try again."}
               </p>
             )}
           </div>

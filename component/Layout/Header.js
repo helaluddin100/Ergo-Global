@@ -31,11 +31,9 @@ function Header() {
                 <img src="/img/icon/close-menu.svg" alt="" />
               </div>
               <li>
-                <Link href="/" className="contact-alt">
-                  Contact
-                </Link>
+                <Link href="/">Contact</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/" onClick={openModal}>
                   How it works
                 </Link>
@@ -44,7 +42,7 @@ function Header() {
                 <Link href="/test" className="contact-btn">
                   Get Started
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </header>
         </div>
