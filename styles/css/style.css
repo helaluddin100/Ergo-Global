@@ -732,6 +732,10 @@ ul.nav-links li .contact-btn:hover {
   display: flex;
   gap: 20px;
   margin-bottom: 20px;
+  width: 1167px;
+  margin: auto;
+  padding-top: 90px;
+  padding-bottom: 20px;
 }
 
 .question-number {
