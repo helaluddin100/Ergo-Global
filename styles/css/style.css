@@ -39,7 +39,7 @@
   --white-color: #ffffff;
 
   /*========== Font and typography ==========*/
-  --body-font: "Poppins", sans-serif;
+  --body-font: "Gilroy-Regular";
   --biggest-font-size: 2.25rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -118,7 +118,7 @@ body {
   color: #777777;
   font-size: 16px;
   font-weight: 400;
-  font-family: "Poppins", sans-serif;
+  font-family: "Gilroy-Regular";
   line-height: 28px;
 }
 
@@ -317,7 +317,7 @@ body {
   color: #777777;
   font-size: 16px;
   font-weight: 400;
-  font-family: "Poppins", sans-serif;
+  font-family: "Gilroy-Regular";
   line-height: 28px;
 }
 
@@ -458,7 +458,7 @@ ul.nav-links li a {
   padding: 12px 32px;
   background: rgba(229, 244, 242, 0.3);
   border-radius: 10px;
-  font-weight: 600;
+  font-weight: 400;
   transition: 0.4s;
   font-size: 16px;
   color: var(--white-color);
@@ -472,7 +472,7 @@ ul.nav-links li .contact-alt {
 }
 ul.nav-links li .contact-btn {
   background: var(--white-color);
-  font-weight: 600;
+  font-weight: 400;
   color: var(--main-color);
   transition: 0.4s;
 }
@@ -622,9 +622,10 @@ ul.nav-links li .contact-btn:hover {
 }
 .how-work-title h2 {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
+  line-height: normal;
   color: #000000;
-  font-family: var(--primary-font);
+  font-family: "Gilroy-SemiBold";
 }
 
 .how-work-item-list h4 {
@@ -1214,7 +1215,7 @@ ul.nav-links li .contact-btn:hover {
   color: #1f2937 !important; /* Selected value text color */
 }
 .css-hlgwow {
-  padding: 12px 20px !important;
+  padding: 17px 20px !important;
   text-align: center !important;
   flex: initial !important;
 }

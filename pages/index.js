@@ -64,7 +64,7 @@ function Home() {
                           stroke="#F8F9FF"
                           strokeWidth="1.5"
                           strokeLinecap="round"
-                          stroke-linejoin="round"
+                          strokeLinejoin="round"
                         />
                       </svg>
                       <span>Take the Test</span>

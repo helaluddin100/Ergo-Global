@@ -118,8 +118,11 @@
     text-align: start;
   }
   .form-group-item input {
-    padding: 15px 22px;
-    border-radius: 10px;
+    padding: 10px 22px;
+    border-radius: 7px;
+  }
+  .css-hlgwow {
+    padding: 10px 20px !important;
   }
   .result-title h2 {
     font-size: 20px;
