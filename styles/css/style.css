@@ -766,7 +766,7 @@ ul.nav-links li .contact-btn:hover {
 .question-section-content .options {
   display: flex;
   flex-direction: column;
-  width: 57%;
+  width: 60%;
   border-radius: 16px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: var(--white-color);
