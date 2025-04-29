@@ -49,9 +49,9 @@ const ScoreMeter = ({ score }) => {
                 <span className="score-point-item">/30 points</span>
               </h2>
             </div>
-            <p className="text-score-abileabe">
+            {/* <p className="text-score-abileabe">
               Recommendations are available on the right{" "}
-            </p>
+            </p> */}
           </div>
         </div>
         <div className="score-list">

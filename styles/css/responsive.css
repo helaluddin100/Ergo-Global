@@ -306,6 +306,18 @@
   .how-close-btn img {
     width: 30px;
   }
+  .score-list-item {
+    padding: 5px;
+  }
+  .score-title-items {
+    padding: 20px 15px;
+  }
+  .score-footer-items {
+    padding: 18px 15px;
+  }
+  .score-footer-items p {
+    font-size: 17px;
+  }
 }
 @media (max-width: 466px) {
   .score-list-item {
