@@ -238,7 +238,7 @@ const ResultSection = ({ totalScore }) => {
                 <Select
                   classNamePrefix="custom-select"
                   options={options}
-                  placeholder="Select Your Team Size"
+                  placeholder="Select your team size"
                   // required
                   value={options.find(
                     (option) => option.value === employeeBase
