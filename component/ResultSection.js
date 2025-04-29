@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Select from "react-select";
 import axios from "axios"; // Import axios
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const ResultSection = ({ totalScore }) => {
   const [email, setEmail] = useState("");
@@ -43,6 +46,9 @@ const ResultSection = ({ totalScore }) => {
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
       setSubmissionStatus("error");
+      toast.error("Please fill out all required fields.", {
+        position: "top-right",
+      });
       return;
     }
 
@@ -59,7 +65,7 @@ const ResultSection = ({ totalScore }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/exam/store", // Replace with your API endpoint
+        "https://admin.buytiq.store/api/exam/store",
         formData,
         {
           headers: {
@@ -72,11 +78,17 @@ const ResultSection = ({ totalScore }) => {
 
       if (response.data.success) {
         setSubmissionStatus("success");
+        toast.success("Data submitted successfully!", {
+          position: "top-right",
+        });
         // Redirect to score page with totalScore as a query parameter
         window.location.href = `/score?totalScore=${totalScore}`;
       } else {
         setSubmissionStatus("error");
-        setFormErrors({ api: "Failed to submit data.  Check the server." });
+        setFormErrors({ api: "Failed to submit data. Check the server." });
+        toast.error("Failed to submit data. Please try again.", {
+          position: "top-right",
+        });
       }
     } catch (error) {
       console.error("API Error:", error);
@@ -85,15 +97,25 @@ const ResultSection = ({ totalScore }) => {
         setFormErrors({
           api: error.response.data.message || "An error occurred.",
         });
+        toast.error("An error occurred: " + error.response.data.message, {
+          position: "top-right",
+        });
       } else if (error.request) {
         setFormErrors({ api: "No response from server." });
+        toast.error("No response from server. Please check your connection.", {
+          position: "top-right",
+        });
       } else {
         setFormErrors({
           api: "Error setting up the request: " + error.message,
         });
+        toast.error("Error setting up the request: " + error.message, {
+          position: "top-right",
+        });
       }
     }
   };
+
 
   return (
     <div className="result-section">

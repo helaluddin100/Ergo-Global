@@ -6,6 +6,8 @@ import "../styles/css/bootstrap.min.css";
 import "../styles/css/font.css";
 import "../styles/css/style.css";
 import "../styles/css/responsive.css";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { Fragment, useEffect } from "react";
 function MyApp({ Component, pageProps }) {
@@ -15,6 +17,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Layout>
         <Component {...pageProps} />
+        <ToastContainer />
       </Layout>
     </>
   );
