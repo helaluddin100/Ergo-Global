@@ -5,7 +5,6 @@ import axios from "axios"; // Import axios
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
 const ResultSection = ({ totalScore }) => {
   const [email, setEmail] = useState("");
   const [agree, setAgree] = useState(true);
@@ -17,6 +16,7 @@ const ResultSection = ({ totalScore }) => {
   const [employeeBase, setEmployeeBase] = useState("");
   const [formErrors, setFormErrors] = useState({});
   const [submissionStatus, setSubmissionStatus] = useState(null);
+  const [loading, setLoading] = useState(false); // Add loading state
 
   const options = [
     { value: "1-10", label: "1-10 employees" },
@@ -31,6 +31,7 @@ const ResultSection = ({ totalScore }) => {
     e.preventDefault();
     setFormErrors({});
     setSubmissionStatus(null);
+    setLoading(true); // Start loading
 
     let errors = {};
     if (!firstName.trim()) errors.firstName = "First Name is required";
@@ -49,6 +50,7 @@ const ResultSection = ({ totalScore }) => {
       toast.error("Please fill out all required fields.", {
         position: "top-right",
       });
+      setLoading(false); // Stop loading
       return;
     }
 
@@ -113,18 +115,16 @@ const ResultSection = ({ totalScore }) => {
           position: "top-right",
         });
       }
+    } finally {
+      setLoading(false); // Stop loading after the request is complete
     }
   };
-
 
   return (
     <div className="result-section">
       <div className="result-title">
         <h2>Thanks! We&apos;ve got your responses.</h2>
         <h2>Please enter your email to see your Ergonomics Risk score.</h2>
-        {/* {totalScore && (
-          <p className="total-score-item">Your Total Score: {totalScore}</p>
-        )} */}
       </div>
       <form onSubmit={handleSubmit}>
         <div className="result-from-wrapper">
@@ -239,7 +239,6 @@ const ResultSection = ({ totalScore }) => {
                   classNamePrefix="custom-select"
                   options={options}
                   placeholder="Select your team size"
-                  // required
                   value={options.find(
                     (option) => option.value === employeeBase
                   )}
@@ -247,9 +246,6 @@ const ResultSection = ({ totalScore }) => {
                     setEmployeeBase(selectedOption.value)
                   }
                 />
-                {/* {formErrors.employeeBase && (
-                  <p className="text-danger">{formErrors.employeeBase}</p>
-                )} */}
               </div>
             </div>
             <div className="form-group-item checkbox">
@@ -266,7 +262,7 @@ const ResultSection = ({ totalScore }) => {
             </div>
             <div className="result-section-btn">
               <button className="custom-btn  custom-test-btn" type="submit">
-                <span> Check Score</span>
+                {loading ? <span>Loading...</span> : <span>Check Score</span>}
               </button>
             </div>
             {submissionStatus === "success" && (

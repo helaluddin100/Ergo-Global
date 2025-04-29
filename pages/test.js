@@ -128,13 +128,23 @@ const TestPage = () => {
               >
                 Previous
               </button>
-              <button
+              {currentStep === 14 ? <button
                 className="custom-btn custom-test-btn"
                 onClick={goNext}
-                // disabled={answers[currentQuestion?.id] === undefined}
+              >
+                <span>Submit</span>
+              </button> : <button
+                className="custom-btn custom-test-btn"
+                onClick={goNext}
               >
                 <span>Next</span>
-              </button>
+              </button>}
+              {/* <button
+                className="custom-btn custom-test-btn"
+                onClick={goNext}
+              >
+                <span>Next</span>
+              </button> */}
             </div>
           </div>
         )}
