@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const ResultSection = ({ totalScore }) => {
   const [email, setEmail] = useState("");
-  const [agree, setAgree] = useState(false);
+  const [agree, setAgree] = useState(true);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [companyName, setCompanyName] = useState("");
@@ -122,9 +122,9 @@ const ResultSection = ({ totalScore }) => {
       <div className="result-title">
         <h2>Thanks! We&apos;ve got your responses.</h2>
         <h2>Please enter your email to see your Ergonomics Risk score.</h2>
-        {totalScore && (
+        {/* {totalScore && (
           <p className="total-score-item">Your Total Score: {totalScore}</p>
-        )}
+        )} */}
       </div>
       <form onSubmit={handleSubmit}>
         <div className="result-from-wrapper">
@@ -234,12 +234,12 @@ const ResultSection = ({ totalScore }) => {
             </div>
             <div className="col-lg-6">
               <div className="form-group-item">
-                <label htmlFor="employee">Employee Base Range</label>
+                <label htmlFor="employee">Team Size</label>
                 <Select
                   classNamePrefix="custom-select"
                   options={options}
-                  placeholder="Select your employee base range"
-                  required
+                  placeholder="Select Tour Team Size"
+                  // required
                   value={options.find(
                     (option) => option.value === employeeBase
                   )}
