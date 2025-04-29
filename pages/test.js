@@ -176,8 +176,8 @@ const questions = [
   },
   {
     id: 2,
-    sectionTitle: "Section 02:",
-    sectionName: "Training, Awareness & Engagement",
+    sectionTitle: "Section 01:",
+    sectionName: "Ergonomics Program Structure & Implementation",
     text: "Does your organization track the effectiveness of ergonomic measures (e.g., through injury rates, employee feedback)?",
     options: [
       { text: "Yes, comprehensively", value: "" },
@@ -188,8 +188,8 @@ const questions = [
   },
   {
     id: 3,
-    sectionTitle: "Section 03:",
-    sectionName: "Training, Awareness & Engagement",
+    sectionTitle: "Section 01:",
+    sectionName: "Ergonomics Program Structure & Implementation",
     text: "Are ergonomic standards consistently applied when designing workstations or purchasing new furniture/equipment (e.g., ensuring desks are adjustable, monitors at eye level)?",
     options: [
       { text: "Always", value: "" },
@@ -200,7 +200,7 @@ const questions = [
   },
   {
     id: 4,
-    sectionTitle: "Section 04:",
+    sectionTitle: "Section 02:",
     sectionName: "Training, Awareness & Engagement",
     text: "How often does your organization provide ergonomic training to employees (e.g., workshops on posture, workstation setup)?",
     options: [
@@ -212,7 +212,7 @@ const questions = [
   },
   {
     id: 5,
-    sectionTitle: "Section 05:",
+    sectionTitle: "Section 02:",
     sectionName: "Training, Awareness & Engagement",
     text: "What resources are provided to employees to promote ergonomic awareness and reduce MSD risks (e.g., posters, workshops, online guides)?",
     options: [
@@ -224,7 +224,7 @@ const questions = [
   },
   {
     id: 6,
-    sectionTitle: "Section 06:",
+    sectionTitle: "Section 02:",
     sectionName: "Training, Awareness & Engagement",
     text: "How actively are employees encouraged to report ergonomic discomfort or health concerns (e.g., through formal reporting systems, open-door policies)?",
     options: [
@@ -236,7 +236,7 @@ const questions = [
   },
   {
     id: 7,
-    sectionTitle: "Section 07:",
+    sectionTitle: "Section 02:",
     sectionName: "Training, Awareness & Engagement",
     text: "Are there formal channels for employees to provide feedback on ergonomics (e.g., surveys, dedicated HR contact for workplace issues)?",
     options: [
@@ -248,7 +248,7 @@ const questions = [
   },
   {
     id: 8,
-    sectionTitle: "Section 08:",
+    sectionTitle: "Section 03:",
     sectionName: "Equipment & Workstation Design",
     text: "To what extent are employees provided with ergonomic equipment (e.g., adjustable chairs, ergonomic keyboards, standing desks)?",
     options: [
@@ -260,7 +260,7 @@ const questions = [
   },
   {
     id: 9,
-    sectionTitle: "Section 09:",
+    sectionTitle: "Section 03:",
     sectionName: "Equipment & Workstation Design",
     text: "To what extent are tasks and workstations designed to minimize ergonomic risks (e.g., reducing repetitive motions, ensuring comfortable postures)?",
     options: [
@@ -272,7 +272,7 @@ const questions = [
   },
   {
     id: 10,
-    sectionTitle: "Section 10:",
+    sectionTitle: "Section 4:",
     sectionName: "Monitoring & Assessment",
     text: "How frequently are ergonomic assessments conducted to ensure workstations meet employee needs (e.g., checking chair height, monitor position)?",
     options: [
@@ -284,7 +284,7 @@ const questions = [
   },
   {
     id: 11,
-    sectionTitle: "Section 11:",
+    sectionTitle: "Section 4:",
     sectionName: "Monitoring & Assessment",
     text: "In the past 12 months, have employees reported issues related to physical discomfort (e.g., back pain, wrist strain, neck fatigue)?",
     options: [
@@ -296,7 +296,7 @@ const questions = [
   },
   {
     id: 12,
-    sectionTitle: "Section 12:",
+    sectionTitle: "Section 4:",
     sectionName: "Monitoring & Assessment",
     text: "Have employees had to take time off due to physical discomfort from workplace conditions in the past year (e.g., due to back pain or repetitive strain injuries)?",
     options: [
@@ -308,7 +308,7 @@ const questions = [
   },
   {
     id: 13,
-    sectionTitle: "Section 13:",
+    sectionTitle: "Section 4:",
     sectionName: "Monitoring & Assessment",
     text: "Are you aware of any employees who have experienced discomfort or injury due to poor workplace ergonomics (e.g., carpal tunnel syndrome, lower back pain)?",
     options: [
@@ -320,7 +320,7 @@ const questions = [
   },
   {
     id: 14,
-    sectionTitle: "Section 14:",
+    sectionTitle: "Section 5:",
     sectionName: "Movement & Remote Work Support",
     text: "How actively are employees supported to incorporate movement into their workday to prevent discomfort (e.g., through break policies, standing desk options)?",
     options: [
@@ -332,7 +332,7 @@ const questions = [
   },
   {
     id: 15,
-    sectionTitle: "Section 15:",
+    sectionTitle: "Section 5:",
     sectionName: "Movement & Remote Work Support",
     text: "How well are remote and hybrid workers supported with ergonomic solutions (e.g., home office assessments, equipment provision)?",
     options: [
