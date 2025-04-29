@@ -265,7 +265,7 @@ const ResultSection = ({ totalScore }) => {
                 {loading ? <span>Loading...</span> : <span>Check Score</span>}
               </button>
             </div>
-            {submissionStatus === "success" && (
+            {/* {submissionStatus === "success" && (
               <p className="text-green-500">
                 Form submitted successfully! Redirecting to score page.
               </p>
@@ -274,7 +274,7 @@ const ResultSection = ({ totalScore }) => {
               <p className="text-red-500">
                 {formErrors.api || "An error occurred. Please try again."}
               </p>
-            )}
+            )} */}
           </div>
         </div>
       </form>
