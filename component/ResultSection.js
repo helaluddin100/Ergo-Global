@@ -41,7 +41,7 @@ const ResultSection = ({ totalScore }) => {
     }
     if (!companyName.trim()) errors.companyName = "Company Name is required";
     if (!location.trim()) errors.location = "Location is required";
-    if (!employeeBase) errors.employeeBase = "Employee Base Range is required";
+    // if (!employeeBase) errors.employeeBase = "Employee Base Range is required";
 
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
@@ -247,9 +247,9 @@ const ResultSection = ({ totalScore }) => {
                     setEmployeeBase(selectedOption.value)
                   }
                 />
-                {formErrors.employeeBase && (
+                {/* {formErrors.employeeBase && (
                   <p className="text-danger">{formErrors.employeeBase}</p>
-                )}
+                )} */}
               </div>
             </div>
             <div className="form-group-item checkbox">
