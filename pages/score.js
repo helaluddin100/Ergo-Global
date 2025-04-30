@@ -35,8 +35,9 @@ const ScorePage = () => {
                   </div>
                   <div className="score-title-items">
                     <p>
-                      Ergo Global ergonomists have lowered risk and improved
-                      team health for 100+ companies around the world.
+                      100+ companies globally have trusted Ergo Global to reduce
+                      workplace discomfort and elevate wellness across their
+                      teams.
                     </p>
                   </div>
                   <div className="score-list-items">
@@ -77,8 +78,9 @@ const ScorePage = () => {
                   </div>
                   <div className="score-title-items">
                     <p>
-                      Ergo Global ergonomists have lowered risk and improved
-                      team health for 100+ companies around the world.
+                      100+ companies globally have trusted Ergo Global to reduce
+                      workplace discomfort and elevate wellness across their
+                      teams.
                     </p>
                   </div>
                   <div className="score-list-items">
@@ -119,8 +121,9 @@ const ScorePage = () => {
                   </div>
                   <div className="score-title-items">
                     <p>
-                      Ergo Global ergonomists have lowered risk and improved
-                      team health for 100+ companies around the world.
+                      100+ companies globally have trusted Ergo Global to reduce
+                      workplace discomfort and elevate wellness across their
+                      teams.
                     </p>
                   </div>
                   <div className="score-list-items">
