@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const HowItWork = ({ isOpen, onClose }) => {
@@ -55,7 +56,9 @@ const HowItWork = ({ isOpen, onClose }) => {
                 </div>
                 <div className="how-work-link">
                   <h5>Ready to assess your setup?</h5>
-                  <h5>Start the calculator and get your score →</h5>
+                  <Link href="/test">
+                    Start the calculator and get your score →
+                  </Link>
                 </div>
               </div>
             </div>

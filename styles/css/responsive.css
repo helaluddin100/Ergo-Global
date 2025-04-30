@@ -215,6 +215,12 @@
     line-height: normal;
     white-space: break-spaces;
   }
+  .how-work-link a {
+    color: var(--main-color);
+    font-size: 16px;
+    line-height: normal;
+    white-space: break-spaces;
+  }
   .how-work-title h2 {
     font-size: 20px;
     line-height: normal;
