@@ -6,7 +6,8 @@ const TestPage = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState({});
   const [totalScore, setTotalScore] = useState(0);
-  const [error, setError] = useState("");
+  // const [error, setError] = useState("");
+  const [errorSteps, setErrorSteps] = useState({});
 
   const totalSteps = questions.length;
   const progress = ((currentStep + 1) / totalSteps) * 100;
@@ -18,16 +19,23 @@ const TestPage = () => {
       ...answers,
       [currentQuestion.id]: selectedOption.value,
     });
-    setError("");
+    setErrorSteps("");
   };
 
   const goNext = () => {
     const selected = answers[currentQuestion.id];
     if (selected === undefined) {
-      setError("Please select an option before proceeding.");
+      setErrorSteps((prev) => ({
+        ...prev,
+        [currentStep]: "Please select an option before proceeding.",
+      }));
       return;
     }
-    setError(""); // Clear error if selection is valid
+    setErrorSteps((prev) => {
+      const newErrors = { ...prev };
+      delete newErrors[currentStep];
+      return newErrors;
+    });
     if (currentStep < totalSteps - 1) {
       setCurrentStep(currentStep + 1);
     } else {
@@ -107,7 +115,10 @@ const TestPage = () => {
                       </label>
                     ))}
                   </div>
-                  {error && <p className="error-message">{error}</p>}
+                  {/* {error && <p className="error-message">{error}</p>} */}
+                  {errorSteps[currentStep] && (
+                    <p className="error-message">{errorSteps[currentStep]}</p>
+                  )}
                 </div>
               </div>
             )}
@@ -128,17 +139,15 @@ const TestPage = () => {
               >
                 Previous
               </button>
-              {currentStep === 14 ? <button
-                className="custom-btn custom-test-btn"
-                onClick={goNext}
-              >
-                <span>Submit</span>
-              </button> : <button
-                className="custom-btn custom-test-btn"
-                onClick={goNext}
-              >
-                <span>Next</span>
-              </button>}
+              {currentStep === 14 ? (
+                <button className="custom-btn custom-test-btn" onClick={goNext}>
+                  <span>Submit</span>
+                </button>
+              ) : (
+                <button className="custom-btn custom-test-btn" onClick={goNext}>
+                  <span>Next</span>
+                </button>
+              )}
               {/* <button
                 className="custom-btn custom-test-btn"
                 onClick={goNext}
