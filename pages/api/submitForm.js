@@ -31,7 +31,7 @@ export default async function handler(req, res) {
                     submittedAt: Date.now(),
                     fields: hubSpotData.fields,
                     context: {
-                        pageUri: 'https://ergo-global-kik8.vercel.app/test',
+                        pageUri: 'https://ergo-global-kik8.vercel.app',
                         pageName: 'Ergonomics Risk Assessment Form',
                     },
                 }),
