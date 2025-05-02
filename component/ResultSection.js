@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Link from "next/link";
 import Select from "react-select";
 import axios from "axios"; // Import axios
 import { toast } from 'react-toastify';
@@ -42,55 +41,38 @@ const ResultSection = ({ totalScore }) => {
     }
     if (!companyName.trim()) errors.companyName = "Company Name is required";
     if (!location.trim()) errors.location = "Location is required";
-    // if (!employeeBase) errors.employeeBase = "Employee Base Range is required";
 
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
       setSubmissionStatus("error");
-      toast.error("Please fill out all required fields.", {
-        position: "top-right",
-      });
+      toast.error("Please fill out all required fields.", { position: "top-right" });
       setLoading(false); // Stop loading
       return;
     }
 
     const formData = {
-      first_name: firstName,
-      last_name: lastName,
-      email: email,
-      company_name: companyName,
-      location: location,
-      designation: designation,
-      employe_based: employeeBase,
-      result_points: String(totalScore), // Convert totalScore to a string
+      firstName,
+      lastName,
+      email,
+      companyName,
+      location,
+      designation,
+      employeeBase,
+      resultPoints: String(totalScore), // Convert totalScore to a string
     };
 
     try {
-      const response = await axios.post(
-        "https://admin.buytiq.store/api/exam/store",
-        formData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-
-      console.log("API Response:", response.data);
+      // API কল করা
+      const response = await axios.post('/api/submitForm', formData);
 
       if (response.data.success) {
         setSubmissionStatus("success");
-        toast.success("Data submitted successfully!", {
-          position: "top-right",
-        });
-        // Redirect to score page with totalScore as a query parameter
+        toast.success("Data submitted successfully!", { position: "top-right" });
         window.location.href = `/score?totalScore=${totalScore}`;
       } else {
         setSubmissionStatus("error");
         setFormErrors({ api: "Failed to submit data. Check the server." });
-        toast.error("Failed to submit data. Please try again.", {
-          position: "top-right",
-        });
+        toast.error("Failed to submit data. Please try again.", { position: "top-right" });
       }
     } catch (error) {
       console.error("API Error:", error);
@@ -99,21 +81,15 @@ const ResultSection = ({ totalScore }) => {
         setFormErrors({
           api: error.response.data.message || "An error occurred.",
         });
-        toast.error("An error occurred: " + error.response.data.message, {
-          position: "top-right",
-        });
+        toast.error("An error occurred: " + error.response.data.message, { position: "top-right" });
       } else if (error.request) {
         setFormErrors({ api: "No response from server." });
-        toast.error("No response from server. Please check your connection.", {
-          position: "top-right",
-        });
+        toast.error("No response from server. Please check your connection.", { position: "top-right" });
       } else {
         setFormErrors({
           api: "Error setting up the request: " + error.message,
         });
-        toast.error("Error setting up the request: " + error.message, {
-          position: "top-right",
-        });
+        toast.error("Error setting up the request: " + error.message, { position: "top-right" });
       }
     } finally {
       setLoading(false); // Stop loading after the request is complete
@@ -265,16 +241,6 @@ const ResultSection = ({ totalScore }) => {
                 {loading ? <span>Loading...</span> : <span>Check Score</span>}
               </button>
             </div>
-            {/* {submissionStatus === "success" && (
-              <p className="text-green-500">
-                Form submitted successfully! Redirecting to score page.
-              </p>
-            )}
-            {submissionStatus === "error" && (
-              <p className="text-red-500">
-                {formErrors.api || "An error occurred. Please try again."}
-              </p>
-            )} */}
           </div>
         </div>
       </form>
