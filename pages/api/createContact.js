@@ -14,7 +14,7 @@ export default async function handler(req, res) {
             ],
         };
 
-        const accessToken = 'pat-na1-f1cb8367-5998-4207-a06f-b2b0b3cffe44';  // Replace with the actual Access Token
+        const accessToken = '';  // Replace with the actual Access Token
 
         try {
             const response = await axios.post(
