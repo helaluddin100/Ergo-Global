@@ -14,7 +14,8 @@ export default async function handler(req, res) {
             ],
         };
 
-        const accessToken = 'pat-na2-448f88f8-1420-4e66-aac0-e86802652fe2';
+        const accessToken = 'pat-na1-f1cb8367-5998-4207-a06f-b2b0b3cffe44';  // Replace with the actual Access Token
+
         try {
             const response = await axios.post(
                 `https://api.hubapi.com/contacts/v1/contact`,
@@ -22,7 +23,7 @@ export default async function handler(req, res) {
                 {
                     headers: {
                         'Content-Type': 'application/json',
-                        'Authorization': `Bearer ${accessToken}`,  // Use Bearer token for Access Token
+                        'Authorization': `Bearer ${accessToken}`,  // Ensure Access Token is in the Authorization header
                     },
                 }
             );
