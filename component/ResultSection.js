@@ -62,10 +62,13 @@ const ResultSection = ({ totalScore }) => {
     };
 
     try {
-      // API কল করা
-      const response = await axios.post('/api/submitForm', formData);
+      // Send data to the first API (submitForm)
+      const submitResponse = await axios.post('/api/submitForm', formData);
 
-      if (response.data.success) {
+      // Send data to the second API (createContact in HubSpot)
+      const contactResponse = await axios.post('/api/createContact', formData);
+
+      if (submitResponse.data.success && contactResponse.data.success) {
         setSubmissionStatus("success");
         toast.success("Data submitted successfully!", { position: "top-right" });
         window.location.href = `/score?totalScore=${totalScore}`;
@@ -95,6 +98,7 @@ const ResultSection = ({ totalScore }) => {
       setLoading(false); // Stop loading after the request is complete
     }
   };
+
 
   return (
     <div className="result-section">
