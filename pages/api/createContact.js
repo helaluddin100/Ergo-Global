@@ -11,11 +11,11 @@ export default async function handler(req, res) {
         const { firstName, lastName, email } = req.body;
 
         const hubSpotData = {
-            properties: [
-                { property: 'firstname', value: firstName },
-                { property: 'lastname', value: lastName },
-                { property: 'email', value: email },
-            ],
+            properties: {
+                firstname: firstName,
+                lastname: lastName,
+                email: email,
+            },
         };
 
         const accessToken = process.env.HUBSPOT_ACCESS_TOKEN; // Get from environment variable
@@ -27,7 +27,7 @@ export default async function handler(req, res) {
         try {
             const response = await axios.post(
                 `https://api.hubapi.com/crm/v3/objects/contacts`, // Using v3 contacts API
-                { properties: hubSpotData.properties }, // v3 uses a different request body structure
+                hubSpotData, //  Send hubSpotData directly
                 {
                     headers: {
                         'Content-Type': 'application/json',
