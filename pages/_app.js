@@ -26,10 +26,10 @@ function MyApp({ Component, pageProps }) {
               })(window,document,'script','dataLayer','GTM-W2FTPKDL');`,
           }}
         />
-        <script
+        {/* <script
           async
           src="https://www.googletagmanager.com/ns.html?id=GTM-W2FTPKDL"
-        ></script>
+        ></script> */}
       </Head>
       <Layout>
         <Component {...pageProps} />
