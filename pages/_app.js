@@ -26,14 +26,10 @@ function MyApp({ Component, pageProps }) {
               })(window,document,'script','dataLayer','GTM-W2FTPKDL');`,
           }}
         />
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-W2FTPKDL"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
+        <script
+          async
+          src="https://www.googletagmanager.com/ns.html?id=GTM-W2FTPKDL"
+        ></script>
       </Head>
       <Layout>
         <Component {...pageProps} />
