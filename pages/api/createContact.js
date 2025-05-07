@@ -8,13 +8,19 @@ export default async function handler(req, res) {
             return res.status(200).json({ message: 'Deployment mode: HubSpot contact creation skipped.' });
         }
 
-        const { firstName, lastName, email } = req.body;
+        const { firstName, lastName, email, companyName, location, designation, employeeBase, resultPoints } = req.body;
 
         const hubSpotData = {
             properties: {
                 firstname: firstName,
                 lastname: lastName,
                 email: email,
+                company: companyName,
+                location: location,
+                designation: designation,
+                team_size: employeeBase,
+                score: resultPoints,
+
             },
         };
 
