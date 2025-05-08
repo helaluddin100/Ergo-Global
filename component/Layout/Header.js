@@ -31,7 +31,7 @@ function Header() {
                 <img src="/img/icon/close-menu.svg" alt="" />
               </div> */}
               <li>
-                <Link href="/">Contact Us</Link>
+                <Link href="https://ergoglobal.com/contact/">Contact Us</Link>
               </li>
               {/* <li>
                 <Link href="/" onClick={openModal}>
